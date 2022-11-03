@@ -22,8 +22,15 @@ define(['./kernel_exec_on_cell'], function (kernel_exec_on_cell) {
             "library": [
                 "using JuliaFormatter",
                 "using JSON",
+                "if isfile(\".JuliaFormatter.toml\")",
+                "config = JuliaFormatter.parse_config(\".JuliaFormatter.toml\")",
+                "else",
+                "config = Dict{String, Any}()",
+                "end",
+                "opt = [Symbol(k) => v for (k, v) in pairs(config)]",
+                "my_format_text(code_str) = format_text(code_str; opt...)"
             ].join("\n"),
-            "prefix": "print(json(format_text(",
+            "prefix": "print(json(my_format_text(",
             "postfix": ")))"
         },
         "javascript": {

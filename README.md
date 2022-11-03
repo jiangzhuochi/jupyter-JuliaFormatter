@@ -42,6 +42,12 @@ jupyter nbextension enable jupyter-JuliaFormatter-main/jupyter-JuliaFormatter
 - a keyboard shortcut for reformatting the current code-cell (default: Alt-F, Mac: Option-F)
 - a keyboard shortcut for reformatting whole code-cells (default: Alt-Shift-F, Mac: Option-Shift-F, Same as vscode format shortcut)
 
+## 配置文件 Configuration File
+
+支持配置文件，`.JuliaFormatter.toml` 须和当前 `.ipynb` 文件在同一目录下
+
+Support configuration files, `.JuliaFormatter.toml` must be the same as the current `.ipynb` file is in the same directory
+
 ## 自定义快捷键 Customize shortcut keys
 
 在 /tree#nbextensions_configurator 中搜索 julia 搜到本插件，下方可以进行配置快捷键
