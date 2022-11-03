@@ -1,6 +1,6 @@
 Type: IPython Notebook Extension
 Name: Jupyter JuliaFormatter
-Description: Use JuliaFormatter to reformat/prettify Python code cells
+Description: Use JuliaFormatter to reformat/prettify Julia code cells
 Link: README.md
 Main: jupyter-JuliaFormatter.js
 Compatibility: Jupyter 4.x, 5.x
