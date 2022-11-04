@@ -30,6 +30,8 @@ define(['./kernel_exec_on_cell'], function (kernel_exec_on_cell) {
                 "opt = [Symbol(k) => v for (k, v) in pairs(config)]",
                 "my_format_text(code_str) = format_text(code_str; opt...)"
             ].join("\n"),
+            // https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/code_prettify/README.html#options
+            "replacements_json_to_kernel": [["$", "\\$"]],
             "prefix": "print(json(my_format_text(",
             "postfix": ")))"
         },
