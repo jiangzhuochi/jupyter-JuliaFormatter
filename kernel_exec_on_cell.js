@@ -100,7 +100,7 @@ define([
         for (var ii = 0; ii < kernel_config.replacements_json_to_kernel.length; ii++) {
             var from = kernel_config.replacements_json_to_kernel[ii][0];
             var to = kernel_config.replacements_json_to_kernel[ii][1];
-            str = str.replace(from, to);
+            str = str.replaceAll(from, to);
         }
         return str;
     };
